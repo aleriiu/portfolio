@@ -5,15 +5,13 @@
     font-family: "Roboto", serif;
 }
 
-a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 1rem;
-    cursor: pointer;
+body {
+    background-color: #000000;
 }
 
-a:hover {
-    color: #fe1100;
+a {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 header,
@@ -45,11 +43,24 @@ header {
     font-weight: 300;
 }
 
+.text-links:hover {
+    color: #1C52E3;
+}
+
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #000000;
+    position: relative;
+}
+
+.hero-img {
+    position: absolute;
+    max-width: 832px;
+    right: -45px;
+    top: 0;
+    z-index: 3;
 }
 
 .hero-container {
@@ -57,6 +68,8 @@ header {
     flex-direction: column;
     width: 70%;
     gap: 2.125rem;
+    position: relative;
+    z-index: 10;
 }
 
 .hero-container_title {
@@ -74,10 +87,45 @@ header {
     padding: 0.875rem 1.875rem;
     border: 0 solid #1C52E3;
     color: #FFFFFF;
-    width: 30%;
+    width: 226px;
 }
 
-.skills {
+.about {
+    background-color: #000000;
+}
+
+.about-container {
+    background-color: #242424;
+    border-radius: 20px;
+    padding: 3.75rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+}
+
+.about-title {
+    color: #1C52E3;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+.about-text {
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    color: #FFFFFF;
+}
+
+.skills,
+.cards {
     display: flex;
     gap: 3.75rem;
     flex-direction: column;
@@ -98,7 +146,8 @@ header {
     flex-direction: column;
 }
 
-.skill {
+.skill,
+.cards-container {
     background-color: #242424;
     border-radius: 20px;
     padding: 2.5rem;
@@ -110,7 +159,7 @@ header {
 .skill-title_container {
     display: flex;
     align-items: center;
-    gap: 1.125rem;
+    gap: 3.75rem;
 }
 
 .flower-icon {
@@ -133,77 +182,88 @@ header {
 }
 
 .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .cards-title,
-.card-title {
-    font-size: 3rem;
-    color: #FFFFFF;
+.cards-title-white {
+    color: #1C52E3;
     font-weight: 400;
+    font-size: 3rem;
+    line-height: 100%;
     text-transform: uppercase;
 }
 
-.card-title:hover {
-    color: #68abe8;
+.cards-title-white {
+    color: #FFFFFF;
 }
 
-.card-title {
-    font-size: 1.8rem;
-    font-weight: 500;
-    cursor: pointer;
+.site-img {
+    width: 540px;
+    border-radius: 7px;
 }
 
 .card {
-    position: relative;
-    width: 30%;
-    overflow: hidden;
-    border-radius: 20px;
-    border: 1px solid #fe1100;
+    border-radius: 15px;
+    border: 2px solid #1C52E399;
+    display: flex;
+    padding: 2.5rem;
+    gap: 2.5rem;
 }
 
-.card>a>img {
-    width: 100%;
-    display: block;
-}
-
-.card-email {
-    width: 23%;
+.cards-container {
+    gap: 2.5rem;
 }
 
 .card-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 2rem;
-    padding-top: 3rem;
+    flex-direction: column;
+    gap: 1.625rem;
 }
 
-.card-container_site {
+.card-container-inside {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 2rem 2rem;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
-.card-description {
-    padding: 0.5rem;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transform: translateY(100%);
-    background-color: #fe1100;
-    transition: all ease-in .3s;
-    color: #ffffff;
-    text-align: center;
+.card-container-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.625rem;
 }
 
-.card:hover .card-description {
-    display: block;
-    transform: translateY(0);
+.card-title {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+    text-transform: uppercase;
+}
+
+.card-text {
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.btn-pink {
+    color: #F35FAD;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    background-color: inherit;
+    border: 0 solid #F35FAD;
+}
+
+.card-container-vertical {
+    flex-direction: row;
+}
+
+.card-vertical {
+    flex-direction: column;
 }
 
 footer {
@@ -226,9 +286,7 @@ footer {
     }
 }
 
-@media (min-width: 1281px) and (max-width: 1440px) {
-
-}
+@media (min-width: 1281px) and (max-width: 1440px) {}
 
 @media (max-width: 1280px) {
 
