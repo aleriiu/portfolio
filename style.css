@@ -23,7 +23,7 @@ a {
 
 h1,
 h2,
-h2 > span,
+h2>span,
 h3 {
     font-family: 'South', sans-serif;
 }
@@ -143,7 +143,6 @@ header {
 .skills,
 .cards {
     display: flex;
-    gap: 3.75rem;
     flex-direction: column;
     align-items: center;
     background-color: #000000;
@@ -312,6 +311,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 3.75rem;
+    padding: 3.75rem 1.25rem 1.875rem 2.5rem;
 }
 
 .form-container {
@@ -336,6 +336,7 @@ footer {
     margin: 0;
     padding: 0.625rem 0.875rem;
     width: 384px;
+    color: #FFFFFF;
 }
 
 .input-comment {
@@ -365,6 +366,11 @@ footer {
     padding: 2.563rem 1.25rem;
     border: 0 solid #1C52E3;
     color: #FFFFFF;
+}
+
+.btn-form:hover {
+    background-color: #1C52E399;
+    cursor: pointer;
 }
 
 .footer-society {
