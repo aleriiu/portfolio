@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'South';
+    src: url(./fonts/South.woff) format("woff");
+    font-style: normal;
+    font-weight: 400;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +19,13 @@ body {
 a {
     text-decoration: none;
     cursor: pointer;
+}
+
+h1,
+h2,
+h2 > span,
+h3 {
+    font-family: 'South', sans-serif;
 }
 
 header,
@@ -44,7 +58,7 @@ header {
 }
 
 .text-links:hover {
-    color: #1C52E3;
+    color: #F35FAD;
 }
 
 .hero {
@@ -53,6 +67,7 @@ header {
     justify-content: space-between;
     background-color: #000000;
     position: relative;
+    padding: 7.438rem 2.5rem;
 }
 
 .hero-img {
@@ -61,6 +76,7 @@ header {
     right: -45px;
     top: 0;
     z-index: 3;
+    transform: translateY(13%);
 }
 
 .hero-container {
@@ -167,11 +183,15 @@ header {
 }
 
 .skill-title {
-    font-size: 1.8rem;
+    font-size: 2.125rem;
     font-weight: 400;
     line-height: 2.25rem;
     color: #F35FAD;
     text-transform: uppercase;
+}
+
+.skill-title-text {
+    gap: 1.125rem;
 }
 
 .skill-text {
