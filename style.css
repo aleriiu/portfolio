@@ -28,12 +28,13 @@ h3 {
     font-family: 'South', sans-serif;
 }
 
-header,
-section,
-footer {
-    padding: 2.5rem 1.25rem;
+header {
+    padding: 1.25rem 2.5rem;
 }
 
+section {
+    padding: 1.875rem 2.5rem;
+}
 
 header {
     display: flex;
@@ -73,7 +74,7 @@ header {
 .hero-img {
     position: absolute;
     max-width: 832px;
-    right: -45px;
+    right: -170px;
     top: 0;
     z-index: 3;
     transform: translateY(13%);
@@ -82,7 +83,6 @@ header {
 .hero-container {
     display: flex;
     flex-direction: column;
-    width: 70%;
     gap: 2.125rem;
     position: relative;
     z-index: 10;
@@ -96,14 +96,26 @@ header {
     text-transform: uppercase;
 }
 
-.btn {
+.btn-container {
     background-color: #1C52E3;
-    font-size: 1.5rem;
-    border-radius: 8px;
-    padding: 0.875rem 1.875rem;
     border: 0 solid #1C52E3;
+    border-radius: 8px;
+    width: 230px;
+    padding: 0.875rem 1.875rem;
+}
+
+.btn-container:hover {
+    cursor: pointer;
+    background-color: #F35FAD;
+}
+
+.btn {
+    background-color: inherit;
+    font-size: 1.5rem;
+    padding-right: 1.563rem;
+    border: 0 solid #1C52E3;
+    border-radius: 8px;
     color: #FFFFFF;
-    width: 226px;
 }
 
 .about {
@@ -140,12 +152,13 @@ header {
     color: #FFFFFF;
 }
 
-.skills,
+.skill-container,
 .cards {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #000000;
+    gap: 3.75rem;
 }
 
 .skills-cards-container {
@@ -162,7 +175,7 @@ header {
 }
 
 .skill,
-.cards-container {
+.cards {
     background-color: #242424;
     border-radius: 20px;
     padding: 2.5rem;
@@ -218,7 +231,7 @@ header {
 }
 
 .site-img {
-    width: 540px;
+    max-width: 540px;
     border-radius: 7px;
 }
 
@@ -232,6 +245,9 @@ header {
 
 .cards-container {
     gap: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .card-container {
@@ -245,12 +261,14 @@ header {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
+    height: 287px;
 }
 
 .card-container-text {
     display: flex;
     flex-direction: column;
     gap: 1.625rem;
+    width: 100%;
 }
 
 .card-title {
@@ -261,11 +279,23 @@ header {
     text-transform: uppercase;
 }
 
+.card-container-text > ul {
+    padding-left: 1rem;
+}
+
 .card-text {
     color: #FFFFFF;
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.75rem;
+}
+
+.btn-pink-container {
+    background-color: inherit;
+    border: 0 solid #F35FAD;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .btn-pink {
@@ -275,18 +305,21 @@ header {
     line-height: 1.625rem;
     background-color: inherit;
     border: 0 solid #F35FAD;
+    padding-right: 1.563rem;
+    cursor: pointer;
 }
 
 .card-container-vertical {
     flex-direction: row;
+    width: 100%;
 }
 
 .card-vertical {
     flex-direction: column;
+    width: 48.8%;
 }
 
 .card-email {
-    align-items: flex-end;
     justify-content: space-between;
 }
 
@@ -299,19 +332,32 @@ header {
 footer {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 1rem;
+    padding: 1.875rem 5rem;
 }
 
 .cards-title-pink {
     color: #F35FAD;
 }
 
+.cards-site {
+    border-radius: 20px 20px 0 0;
+    gap: 3.75rem;
+    padding: 3.75rem 2.5rem 0;
+}
+
+.cards-mail {
+    border-radius: 0 0 20px 20px;
+    gap: 3.75rem;
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+}
+
 .footer {
     display: flex;
     justify-content: center;
-    gap: 3.75rem;
-    padding: 3.75rem 1.25rem 1.875rem 2.5rem;
+    justify-content: space-between;
+    padding: 1.875rem 0;
 }
 
 .form-container {
@@ -389,31 +435,12 @@ footer {
 
 @media (max-width: 1280px) {
 
-    header,
-    section,
-    footer {
-        padding: 2rem 2.25rem;
-    }
-
-    .hero-container {
-        width: 59%;
-    }
-
     .hero-container_text {
         font-size: 1.2rem;
     }
 
     .hero-container_title>span {
         font-size: 3.5rem;
-    }
-
-    .skill {
-        width: 47%;
-    }
-
-    .skills-container {
-        flex-wrap: wrap;
-        justify-content: center;
     }
 }
 
