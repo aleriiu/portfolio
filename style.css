@@ -5,15 +5,17 @@
     font-weight: 400;
 }
 
+body {
+    background-image: url(./images/bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Roboto", serif;
-}
-
-body {
-    background-color: #000000;
 }
 
 a {
@@ -40,7 +42,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
 }
 
 .logo {
@@ -66,7 +67,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000000;
     position: relative;
     padding: 7.438rem 2.5rem;
 }
@@ -118,10 +118,6 @@ header {
     color: #FFFFFF;
 }
 
-.about {
-    background-color: #000000;
-}
-
 .about-container {
     background-color: #242424;
     border-radius: 20px;
@@ -157,7 +153,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #000000;
     gap: 3.75rem;
 }
 
@@ -279,7 +274,7 @@ header {
     text-transform: uppercase;
 }
 
-.card-container-text > ul {
+.card-container-text>ul {
     padding-left: 1rem;
 }
 
@@ -307,6 +302,10 @@ header {
     border: 0 solid #F35FAD;
     padding-right: 1.563rem;
     cursor: pointer;
+}
+
+.btn-pink:hover {
+    color: #1C52E3;
 }
 
 .card-container-vertical {
@@ -415,7 +414,7 @@ footer {
 }
 
 .btn-form:hover {
-    background-color: #1C52E399;
+    background-color: #F35FAD;
     cursor: pointer;
 }
 
@@ -425,99 +424,160 @@ footer {
 }
 
 @media (min-width: 1441px) {
-    .section {
-        margin: 0.75rem auto 0 auto;
+
+    section,
+    footer {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    .hero-container {
         width: 80%;
     }
 }
 
-@media (min-width: 1281px) and (max-width: 1440px) {}
+@media (min-width: 1281px) and (max-width: 1440px) {
+    .hero-container {
+        width: 80%;
+    }
+}
 
 @media (max-width: 1280px) {
-
-    .hero-container_text {
-        font-size: 1.2rem;
+    .hero-container_title {
+        font-size: 4rem;
+        line-height: 4.25rem;
     }
 
-    .hero-container_title>span {
-        font-size: 3.5rem;
+    .about-title,
+    .cards-title,
+    .cards-title-white {
+        font-size: 2.4rem;
     }
+
+    .about-text {
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+
+    .text-container {
+        gap: 1.5rem;
+    }
+
+    .skill-title {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+
+    .skill-text {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    .skills-cards-container,
+    .skills-container {
+        gap: 1.3rem;
+    }
+
+    .card,
+    .card-container-vertical {
+        flex-direction: column;
+    }
+
+    .card-vertical,
+    .site-img {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
 }
 
 @media (max-width: 790px) {
 
-    header,
-    section,
-    footer {
-        padding: 1rem 0.9rem;
+    section {
+        padding: 1.2rem 1.5rem;
     }
 
     header {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-
-    .header-links {
+        flex-direction: column;
         gap: 1rem;
     }
 
     .hero {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem 0;
-    }
-
-    .hero-container {
-        width: 100%;
+        padding: 2rem 2.5rem;
     }
 
     .hero-container_title {
-        text-align: center;
-    }
-
-    .hero-container_title {
-        font-size: 2rem;
-    }
-
-    .hero-container_title>span {
         font-size: 3rem;
+        line-height: 3.25rem;
     }
 
-    .hero-container_text {
-        text-align: justify;
+    .hero-img {
+        transform: translateY(0);
     }
 
-    .skill-text-center {
-        text-align: center;
+    .about-container,
+    .cards {
+        padding: 1.75rem 1.5rem;
     }
 
-    .skills-container {
-        gap: 0.9rem;
+    .about-title,
+    .cards-title,
+    .cards-title-white {
+        font-size: 1.4rem;
     }
 
-    .skill {
-        width: 100%;
-        padding: 1.313rem;
+    .about-container,
+    .skill-title_container {
+        gap: 1.75rem;
     }
 
-    .card {
-        width: 100%;
+    .skill-title_container {
+        flex-direction: column-reverse;
     }
 
-    .card-container_site {
-        gap: 1rem;
+    .skills-cards-container {
+        flex-direction: column;
     }
 
-    .card-container {
-        gap: 1rem;
+    .skill-title-text {
+        flex-direction: row;
     }
 
-    .card-email {
-        width: 47%;
+    .skill-title {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
     }
 
-    .hero-photo {
-        width: 100%;
+    .skill-text {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+    .skill-container, .cards {
+        gap: 1.75rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+    .btn-pink {
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+    }
+
+    .footer-society {
+        flex-direction: column;
     }
 }
