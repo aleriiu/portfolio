@@ -335,6 +335,10 @@ footer {
     padding: 1.875rem 5rem;
 }
 
+.btn-form-desk {
+    display: none;
+}
+
 .cards-title-pink {
     color: #F35FAD;
 }
@@ -394,6 +398,19 @@ footer {
     color: #FFFFFF;
     font-size: 1rem;
     line-height: 1.625rem;
+}
+
+:focus::placeholder {
+    color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
 }
 
 .form-text-container {
@@ -505,19 +522,36 @@ footer {
     header {
         flex-direction: column;
         gap: 1rem;
+        padding: 1.25rem 1.5rem;
     }
 
-    .hero {
-        padding: 2rem 2.5rem;
+    .hero,
+    footer {
+        padding: 2rem 1.5rem;
     }
 
     .hero-container_title {
-        font-size: 3rem;
-        line-height: 3.25rem;
+        font-size: 2.6rem;
+        line-height: 2.9rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding-right: 1rem;
+    }
+
+    .btn-container {
+        width: 163px;
+        padding: 0.875rem 1.5rem;
+    }
+
+    .btn-container>img {
+        width: 16px;
     }
 
     .hero-img {
         transform: translateY(0);
+        max-width: 0;
     }
 
     .about-container,
@@ -534,6 +568,20 @@ footer {
     .about-container,
     .skill-title_container {
         gap: 1.75rem;
+    }
+
+    .skill,
+    .cards,
+    .card {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .card-container-inside {
+        height: 185px;
+    }
+
+    .btn-pink-container>img {
+        width: 16px;
     }
 
     .skill-title_container {
@@ -558,7 +606,8 @@ footer {
         line-height: 1rem;
     }
 
-    .skill-container, .cards {
+    .skill-container,
+    .cards {
         gap: 1.75rem;
     }
 
@@ -575,9 +624,35 @@ footer {
     .btn-pink {
         font-size: 0.8rem;
         line-height: 1.1rem;
+        padding-right: 1rem;
     }
 
-    .footer-society {
+    .form-text-container,
+    .form-container {
+        width: 100%;
+    }
+
+    .form-btn-container {
         flex-direction: column;
     }
+
+    .input-name,
+    .input-phone,
+    .input-comment {
+        width: 100%;
+    }
+
+    .btn-form-mob {
+        display: none;
+    }
+
+    .btn-form-desk {
+        display: block;
+        padding: 1rem;
+    }
+
+    .footer-society > a > img {
+        width: 150px;
+    }
+
 }
