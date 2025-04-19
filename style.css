@@ -59,6 +59,18 @@ header {
     font-weight: 300;
 }
 
+.text-links:hover:after {
+    transform: scaleX(1);
+}
+
+.text-links::after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px #F35FAD;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
 .text-links:hover {
     color: #F35FAD;
 }
@@ -102,6 +114,7 @@ header {
     border-radius: 8px;
     width: 230px;
     padding: 0.875rem 1.875rem;
+    cursor: pointer;
 }
 
 .btn-container:hover {
@@ -116,6 +129,7 @@ header {
     border: 0 solid #1C52E3;
     border-radius: 8px;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .about-container {
@@ -530,6 +544,10 @@ input[type='number'] {
         padding: 2rem 1.5rem;
     }
 
+    .text-links {
+        font-size: 1rem;
+    }
+
     .hero-container_title {
         font-size: 2.6rem;
         line-height: 2.9rem;
@@ -562,7 +580,7 @@ input[type='number'] {
     .about-title,
     .cards-title,
     .cards-title-white {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 
     .about-container,
@@ -597,13 +615,13 @@ input[type='number'] {
     }
 
     .skill-title {
-        font-size: 1.2rem;
-        line-height: 1.4rem;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
     }
 
     .skill-text {
-        font-size: 0.8rem;
-        line-height: 1rem;
+        font-size: 1rem;
+        line-height: 1.2rem;
     }
 
     .skill-container,
@@ -640,6 +658,7 @@ input[type='number'] {
     .input-phone,
     .input-comment {
         width: 100%;
+        border-radius: 15px;
     }
 
     .btn-form-mob {
@@ -651,7 +670,7 @@ input[type='number'] {
         padding: 1rem;
     }
 
-    .footer-society > a > img {
+    .footer-society>a>img {
         width: 150px;
     }
 
