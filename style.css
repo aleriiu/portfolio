@@ -152,7 +152,7 @@ header {
 
 .ticker {
     overflow: hidden;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .ticker__wrapper {
@@ -161,7 +161,7 @@ header {
     gap: 4.063rem;
     padding-left: 0;
     width: fit-content;
-    animation: ticker 4s linear infinite;
+    animation: ticker 10s linear infinite;
     animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
@@ -174,12 +174,20 @@ header {
 
 @keyframes ticker {
 
-    from {
+    /* from {
         transform: translateX(0);
     }
 
     to {
         transform: translateX(-50%);
+    } */
+
+    0% {
+        transform: translateZ(0);
+    }
+ 
+    100% {
+        transform: translate3d(-100%, 0, 0);
     }
 }
 
