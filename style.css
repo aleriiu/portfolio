@@ -6,9 +6,10 @@
 }
 
 body {
-    background-image: url(./images/bg.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: url(./images/bg.webp); */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #000000;
 }
 
 * {
@@ -98,6 +99,7 @@ header {
     gap: 2.125rem;
     position: relative;
     z-index: 10;
+    width: 70%;
 }
 
 .hero-container_title {
@@ -527,6 +529,10 @@ input[type='number'] {
         transform: translateY(8%);
     }
 
+    .hero-container {
+        width: 90%;
+    }
+
 }
 
 @media (max-width: 790px) {
@@ -553,6 +559,10 @@ input[type='number'] {
     .hero-container_title {
         font-size: 2.6rem;
         line-height: 2.9rem;
+    }
+
+    .hero-container {
+        width: 100%;
     }
 
     .btn {
