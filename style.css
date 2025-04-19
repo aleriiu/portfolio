@@ -85,11 +85,11 @@ header {
 
 .hero-img {
     position: absolute;
-    max-width: 832px;
-    right: -170px;
+    height: 448px;
+    right: 0;
     top: 0;
     z-index: 3;
-    transform: translateY(13%);
+    transform: translateY(16%);
 }
 
 .hero-container {
@@ -509,13 +509,11 @@ input[type='number'] {
         gap: 1.3rem;
     }
 
-    .card,
-    .card-container-vertical {
+    .card-container-mob {
         flex-direction: column;
-    }
+    }  
 
-    .card-vertical,
-    .site-img {
+    .card-vertical {
         width: 100%;
     }
 
@@ -523,6 +521,10 @@ input[type='number'] {
         flex-direction: column;
         gap: 1.5rem;
         align-items: center;
+    }
+
+    .hero-img {
+        transform: translateY(8%);
     }
 
 }
