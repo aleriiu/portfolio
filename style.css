@@ -134,6 +134,54 @@ header {
     cursor: pointer;
 }
 
+.partners-container {
+    background-color: #242424;
+    border-radius: 20px;
+    padding: 2.5rem 0 2.5rem 2.5rem;
+    display: flex;
+    gap: 5.625rem;
+    align-items: center;
+}
+
+.partners-title {
+    color: #F35FAD;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.ticker {
+    overflow: hidden;
+}
+
+.ticker__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4.063rem;
+    padding-left: 0;
+    width: fit-content;
+    animation: ticker 4s linear infinite;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.ticker__item {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+@keyframes ticker {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 .about-container {
     background-color: #242424;
     border-radius: 20px;
@@ -513,7 +561,7 @@ input[type='number'] {
 
     .card-container-mob {
         flex-direction: column;
-    }  
+    }
 
     .card-vertical {
         width: 100%;
