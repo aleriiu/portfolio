@@ -153,6 +153,7 @@ header {
 .ticker {
     overflow: hidden;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 .ticker__wrapper {
@@ -161,7 +162,7 @@ header {
     gap: 4.063rem;
     padding-left: 0;
     width: fit-content;
-    animation: ticker 10s linear infinite;
+    animation: ticker 8s linear infinite;
     animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
