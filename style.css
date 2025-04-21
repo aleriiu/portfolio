@@ -175,20 +175,12 @@ header {
 
 @keyframes ticker {
 
-    /* from {
+    from {
         transform: translateX(0);
     }
 
     to {
-        transform: translateX(-50%);
-    } */
-
-    0% {
-        transform: translateZ(0);
-    }
- 
-    100% {
-        transform: translate3d(-100%, 0, 0);
+        transform: translateX(-40%);
     }
 }
 
