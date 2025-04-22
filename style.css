@@ -42,7 +42,7 @@ section {
 .hero-bg {
     background-image: url(./images/hero_bg.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .main-bg {
