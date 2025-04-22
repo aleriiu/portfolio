@@ -150,7 +150,7 @@ header {
     text-transform: uppercase;
 }
 
-.ticker {
+/* .ticker {
     overflow: hidden;
     margin: 0 auto;
     max-width: 100%;
@@ -162,10 +162,8 @@ header {
     gap: 4.063rem;
     padding-left: 0;
     width: fit-content;
-    animation: ticker 8s linear infinite;
-    animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation: scroll 8s linear infinite;
+    animation: scroll 8s linear infinite;
 }
 
 .ticker__item {
@@ -173,15 +171,62 @@ header {
     white-space: nowrap;
 }
 
-@keyframes ticker {
+@keyframes scroll {
 
-    from {
+    0% {
+        -webkit-transform: translateX(0);
         transform: translateX(0);
     }
 
-    to {
-        transform: translateX(-100%);
+    100% {
+        -webkit-transform: translateX(calc(-170px * 12));
+        transform: translateX(calc(-170px * 12));
     }
+} */
+
+@-webkit-keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-270px * 12));
+        transform: translateX(calc(-270px * 12));
+    }
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-270px * 12));
+        transform: translateX(calc(-270px * 12));
+    }
+}
+
+.ticker {
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.clients_slider-track {
+    -webkit-animation: scroll 20s linear infinite;
+    animation: scroll 20s linear infinite;
+    display: flex;
+    align-items: center;
+    width: calc(270px * 12);
+}
+
+.clients__slide {
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-container {
@@ -452,6 +497,7 @@ footer {
     padding: 0.625rem 0.875rem;
     width: 384px;
     color: #FFFFFF;
+    border-radius: 15px;
 }
 
 .input-comment {
@@ -733,7 +779,6 @@ input[type='number'] {
     .input-phone,
     .input-comment {
         width: 100%;
-        border-radius: 15px;
     }
 
     .btn-form-mob {
