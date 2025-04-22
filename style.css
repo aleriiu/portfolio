@@ -6,9 +6,6 @@
 }
 
 body {
-    /* background-image: url(./images/bg.webp); */
-    /* background-repeat: no-repeat;
-    background-size: cover; */
     background-color: #000000;
 }
 
@@ -33,16 +30,25 @@ h3 {
 
 header {
     padding: 1.25rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 section {
     padding: 1.875rem 2.5rem;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.hero-bg {
+    background-image: url(./images/hero_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main-bg {
+    background-repeat: repeat;
+    background-image: url(./images/sections_bg.png);
+    background-size: contain;
 }
 
 .logo {
