@@ -11,7 +11,7 @@ mainForm.addEventListener('submit', async (e) => {
 
   const url = 'https://api.telegram.org/bot8002790723:AAGPPZxcNE0zz6459VGSluQyOAD2AcJaGgI';
 
-  const text = `Сообщение из формы\r\n\r\nФИО: ${nameInput.value}\r\nКомментарий: ${messageInput.value}\r\nТелефон: ${phoneInput.value}`;
+  const text = `Сообщение из формы\r\n\r\nФИО: ${nameInput.value}\r\nТелефон: ${phoneInput.value}\r\nКомментарий: ${messageInput.value}`;
 
   await sendTextMessage(text);
 
@@ -31,7 +31,7 @@ async function sendTextMessage(text) {
   formData.append('parse_mode', 'Markdown');
   formData.append('text', text);
 
-  const response = await fetch(urlText, {
+  const response = await fetch(url, {
     method: 'POST',
     body: formData
   });
