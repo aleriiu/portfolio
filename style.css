@@ -569,6 +569,26 @@ a.check {
     font-weight: 300;
 }
 
+
+.error {
+    padding: 4.5rem 2.5rem 5.375rem;
+}
+
+.error-container {
+    display: flex;
+    align-items: center;
+}
+
+.error-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2.125rem;
+}
+
+.error-img {
+    width: 550px;
+}
+
 @media (min-width: 1441px) {
 
     section,
@@ -644,6 +664,10 @@ a.check {
 
     .hero-container {
         width: 90%;
+    }
+
+    .error-img {
+        width: 411px;
     }
 
 }
@@ -809,6 +833,14 @@ a.check {
 
     .footer-society>a>img {
         width: 150px;
+    }
+
+    .error-container {
+        flex-direction: column;
+    }
+
+    .error-img {
+        width: 320px;
     }
 
 }
