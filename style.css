@@ -437,6 +437,10 @@ footer {
     align-items: center;
 }
 
+.cards-site-progect {
+    padding: 3.75rem 2.5rem;
+}
+
 .cards-mail {
     border-radius: 0 0 20px 20px;
     gap: 3.75rem;
